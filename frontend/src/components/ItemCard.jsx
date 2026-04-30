@@ -10,6 +10,8 @@ function ItemCard({ item, onDelete }) {
       />
       <h3>{item.name}</h3>
       <p><strong>Category:</strong> {item.category}</p>
+      {/* Displaying the New Field */}
+      <p><strong>Manufacturer:</strong> {item.manufacturerCountry}</p>
       <p><strong>Price:</strong> ${item.price}</p>
       <p>{item.description}</p>
 

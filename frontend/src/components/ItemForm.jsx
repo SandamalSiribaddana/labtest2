@@ -5,6 +5,7 @@ function ItemForm({ initialValues, onSubmit, submitText }) {
     initialValues || {
       name: "",
       category: "",
+      manufacturerCountry: "", // Initialize new field
       price: "",
       description: "",
       imageUrl: "",
@@ -33,6 +34,16 @@ function ItemForm({ initialValues, onSubmit, submitText }) {
 
       <label>Category</label>
       <input name="category" value={formData.category} onChange={handleChange} required />
+
+      {/* New Input Field for Manufacturer Country */}
+      <label>Manufacturer Country</label>
+      <input 
+        name="manufacturerCountry" 
+        value={formData.manufacturerCountry} 
+        onChange={handleChange} 
+        placeholder="e.g. USA, Japan"
+        required 
+      />
 
       <label>Price</label>
       <input
